@@ -1,0 +1,117 @@
+/*******************************************************************Projects********************************************************************/
+html {
+    scroll-behavior: smooth;
+}
+
+main{
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects {
+    background-color: white;
+    padding: 32px 0;
+    margin-top: 2rem;
+}
+  
+.project-pic {
+    width: 65%;
+    height: 60%;
+}
+  
+.projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+  
+.project-container {
+    text-align: center;
+    width: 21.875rem;
+    padding: 1rem;
+}
+
+.project-container p {
+    padding: 0.4rem;
+  }
+  
+.project-title {
+    margin-bottom: 0.5rem;
+}
+  
+.project-details {
+    margin-bottom: 0.5rem;
+}
+  
+.project-card {
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px gray;
+    padding: 20px;
+    margin: 10px;
+}
+
+#links{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    background-color: green;
+    border-radius: 2px;
+    border: 2px solid lightgreen;
+    background-color: green;
+    padding: 0px 30px;
+}
+#links:hover{
+    border: 2px solid green;
+    background-color: lightgreen;
+    color: black;
+}
+
+
+/*****************************************************************Media query*******************************************************************/
+@media (min-width: 320px) and (max-width: 1024px) {
+    .projects {
+        background-color: white;
+        padding: 32px 0;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .projects-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+    
+    .project-container {
+        text-align: center;
+        width: 100%; 
+        padding: 1rem;
+    }
+    
+    .project-card {
+        background-color: #fff;
+        border-radius: 11px;
+        box-shadow: 0 3px 10px gray;
+        padding: 20px;
+        margin: 10px;
+        flex: none; 
+        width: 90%; 
+        max-width: 400px; 
+    }
+    
+    .project-pic {
+        width: 100%; 
+        height: auto;
+    }
+}
+
