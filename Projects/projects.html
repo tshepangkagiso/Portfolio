@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="/Projects/styleP.css">
     <script src="/Projects/projects.js" defer></script>
+    
 </head>
 <body>
-    <header id="home">
+      <div id="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+    
+    <div id="content">
+      <header id="home">
         <nav>
             <div class="logo"><p>Tshepang Kagiso</p></div>
             <ul>
@@ -19,9 +25,9 @@
             </ul>
             <button id="downloadButton">Download CV</button>
         </nav>
-    </header>
+      </header>
 
-    <section class="projects" id="projects">
+      <section class="projects" id="projects">
 
         <h2 class="projects-title">Some of my Projects</h2>
 
@@ -83,7 +89,7 @@
         </div>
       </section>
 
-    <section class="ContactFormSec" id="contact">
+      <section class="ContactFormSec" id="contact">
         <section class="ContactForm">
             <h2>Contact Me</h2>
             <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
@@ -96,9 +102,9 @@
                 <button id="btnForm" type="submit">Send Message</button>
             </form>
         </section>
-    </section>
+      </section>
 
-    <footer>
+      <footer>
         <div class="footerContainer">
             <div class="footerContact">
                 <p>Email: tshepangkagisomashigo8@gmail.com</p>
@@ -110,6 +116,7 @@
                 </ul>
             </div>
         </div>
-    </footer>
+      </footer>
+    </div>
 </body>
 </html>

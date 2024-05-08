@@ -8,108 +8,116 @@
     <script src="app.js" defer></script>
 </head>
 <body>
-    <header id="home">
-        <nav>
-            <div class="logo"><p>Tshepang Kagiso</p></div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="./Projects/projects.html">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button id="downloadButton">Download CV</button>
-        </nav>
-    </header>
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+    </div>
 
-    <section class="introContainer" id="about">
-        <div class="headings">
-            <h1>Hi, I'm Tshepang Kagiso Mashigo</h1>
-            <h2>I'm a third-year Bachelor of Computing student</h2>
-        </div>
+    <div id="content">
+        <header id="home">
+            <nav>
+                <div class="logo"><p>Tshepang Kagiso</p></div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="./Projects/projects.html">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button id="downloadButton">Download CV</button>
+            </nav>
+        </header>
     
-        <div class="intro">
-            <p>I'm deeply passionate about software engineering, viewing each line of code as an opportunity to innovate and solve problems. With a keen interest in API development, database optimization, and transforming business challenges into software solutions, I enjoy crafting solutions that bridge the gap between complexity and simplicity, even in my free time.</p>
-            <p>As a Bcom software engineering student, I'm eager to learn and collaborate with industry experts. With a solid foundation in software engineering and a proactive problem-solving approach, I'm ready to contribute effectively to your team. I'm excited to leverage my skills and passion for learning to make meaningful contributions to your company's success while growing alongside seasoned professionals.</p>            
-        </div>
-    
-        <div class="imageFrame">
-            <img src="./images/Selected photo.jpg" alt="Your Image">
-        </div>
-        <button class="contactMeBtn" id="goProjects">Explore My Projects</button>
-    </section>
+        <section class="introContainer" id="about">
+            <div class="headings">
+                <h1>Hi, I'm Tshepang Kagiso Mashigo</h1>
+                <h2>I'm a third-year Bachelor of Computing student</h2>
+            </div>
+        
+            <div class="intro">
+                <p>I'm deeply passionate about software engineering, viewing each line of code as an opportunity to innovate and solve problems. With a keen interest in API development, database optimization, and transforming business challenges into software solutions, I enjoy crafting solutions that bridge the gap between complexity and simplicity, even in my free time.</p>
+                <p>As a Bcom software engineering student, I'm eager to learn and collaborate with industry experts. With a solid foundation in software engineering and a proactive problem-solving approach, I'm ready to contribute effectively to your team. I'm excited to leverage my skills and passion for learning to make meaningful contributions to your company's success while growing alongside seasoned professionals.</p>            
+            </div>
 
-    <section class="skill" id="skills">
-        <div class="skillsContainer">
-            <div class="skillCard">
-                <h3>Languages</h3>
-                <ul>
-                    <li>C#</li>
-                    <li>Javascript</li>
-                    <li>Html</li>
-                    <li>Css</li>
-                </ul>
+            <div class="imageFrame">
+                <img src="./images/Selected photo.jpg" alt="Your Image">
             </div>
-        
-            <div class="skillCard">
-                <h3>Backend Technologies</h3>
-                <ul>
-                    <li>ASP.NET</li>
-                    <li>Node.js</li>
-                    <li>Express.js</li>
-                </ul>
-            </div>
-        
-            <div class="skillCard">
-                <h3>Databases</h3>
-                <ul>
-                    <li>Microsoft SQLserver</li>
-                    <li>MongoDB</li>
-                    <li>SQLite</li>
-                </ul>
-            </div>
-        
-            <div class="skillCard">
-                <h3>Other Skills</h3>
-                <ul>
-                    <li>API Development</li>
-                    <li>RESTful Services</li>
-                    <li>Version Control (Git)</li>
-                    <li>Agile Methodologies</li>
-                    <li>Machine Learning Algorithms</li>
-                    <li>Software Architecture</li>
-                </ul>
-            </div>
-        </div>    
-    </section>
-
-    <section class="ContactFormSec" id="contact">
-        <section class="ContactForm">
-            <h2>Contact Me</h2>
-            <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button id="btnForm" type="submit">Send Message</button>
-            </form>
+ 
+            <button class="contactMeBtn" id="goProjects">Explore My Projects</button>
         </section>
-        
-    </section>
-    <footer>
-        <div class="footerContainer">
-            <div class="footerContact">
-                <p>Email: tshepangkagisomashigo8@gmail.com</p>
+    
+        <section class="skill" id="skills">
+            <div class="skillsContainer">
+                <div class="skillCard">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>C#</li>
+                        <li>Javascript</li>
+                        <li>Html</li>
+                        <li>Css</li>
+                    </ul>
+                </div>
+            
+                <div class="skillCard">
+                    <h3>Backend Technologies</h3>
+                    <ul>
+                        <li>ASP.NET</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                    </ul>
+                </div>
+            
+                <div class="skillCard">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>Microsoft SQLserver</li>
+                        <li>MongoDB</li>
+                        <li>SQLite</li>
+                    </ul>
+                </div>
+            
+                <div class="skillCard">
+                    <h3>Other Skills</h3>
+                    <ul>
+                        <li>API Development</li>
+                        <li>RESTful Services</li>
+                        <li>Version Control (Git)</li>
+                        <li>Agile Methodologies</li>
+                        <li>Machine Learning Algorithms</li>
+                        <li>Software Architecture</li>
+                    </ul>
+                </div>
+            </div>    
+        </section>
+    
+        <section class="ContactFormSec" id="contact">
+            <section class="ContactForm">
+                <h2>Contact Me</h2>
+                <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button id="btnForm" type="submit">Send Message</button>
+                </form>
+            </section>
+            
+        </section>
+        <footer>
+            <div class="footerContainer">
+                <div class="footerContact">
+                    <p>Email: tshepangkagisomashigo8@gmail.com</p>
+                </div>
+                <div class="footerSocial">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/tshepang-kagiso-mashigo-592a19264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/tshepangkagiso" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footerSocial">
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/tshepang-kagiso-mashigo-592a19264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://github.com/tshepangkagiso" target="_blank">GitHub</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
+
 </body>
 </html>

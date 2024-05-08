@@ -107,6 +107,7 @@ main{
         flex: none; 
         width: 90%; 
         max-width: 400px; 
+        margin-top: 50px;
     }
     
     .project-pic {
