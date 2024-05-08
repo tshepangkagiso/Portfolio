@@ -15,7 +15,7 @@
     <div id="content">
         <header id="home">
             <nav>
-                <div class="logo"><p>Tshepang Kagiso</p></div>
+                <div class="logo" loading="lazy"><p>Tshepang Kagiso</p></div>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -90,15 +90,16 @@
         </section>
     
         <section class="ContactFormSec" id="contact">
-            <section class="ContactForm">
+            <section class="ContactForm" loading="lazy">
                 <h2>Contact Me</h2>
-                <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
+                <form action="https://formsubmit.co/tshepangkagisomashigo8@gmail.com" method="POST">
+                    <input type="hidden" name="_next" value="https://tshepangkagisomashigoportfolio.onrender.com/index.html">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required placeholder="Your name">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required placeholder="Email Address">
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <textarea id="message" name="message" required placeholder="Message.."></textarea>
                     <button id="btnForm" type="submit">Send Message</button>
                 </form>
             </section>

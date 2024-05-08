@@ -9,7 +9,7 @@ function Loader() {
         setTimeout(function() {
             document.getElementById("loading-overlay").style.display = "none";
             document.getElementById("content").style.display = "block";
-        }, 2500);
+        }, 2000);
     });
 }
 

@@ -116,3 +116,20 @@ main{
     }
 }
 
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.25;
+    }
+    to {
+      opacity: 0.5;
+    }
+    to {
+        opacity: 0.75;
+      }
+      to {
+        opacity: 1;
+      }
+}

@@ -15,6 +15,8 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
+    opacity: 0;
+    animation: fadeIn 5s ease forwards;
 }
 nav{
     width: 100%;
@@ -408,4 +410,24 @@ footer {
     .footerSocial {
         margin-top: 20px;
     }
+}
+
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.25;
+    }
+    to {
+      opacity: 0.5;
+    }
+    to {
+        opacity: 0.75;
+      }
+      to {
+        opacity: 1;
+      }
 }
