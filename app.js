@@ -1,8 +1,7 @@
 // DOM Elements
 const loadingOverlay = document.getElementById('loading-overlay');
-const downloadCVBtn = document.getElementById('downloadButton');
-const downloadTranscriptBtn = document.getElementById('downloadTranscript')
-const contactForm = document.getElementById('contactForm');
+const downloadCVBtn = document.getElementById('downloadCV');
+const downloadTranscriptBtn = document.getElementById('downloadTranscript');
 
 // Helper function for delay
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
@@ -25,7 +24,7 @@ function downloadCV() {
     document.body.removeChild(link);
 }
 
-// Download Transript function
+// Download Transcript function
 function downloadTranscript() {
     const link = document.createElement('a');
     link.href = 'resources/Tshepang Mashigo Transcript.pdf';
