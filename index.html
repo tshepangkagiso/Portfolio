@@ -3,122 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tshepang | Portfolio</title>
+    <title>Tshepang Kagiso Mashigo | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="app.js" type="module" defer></script>
 </head>
 <body>
     <div id="loading-overlay">
         <div class="spinner"></div>
     </div>
 
-    <div id="content">
-        <header id="home">
-            <nav>
-                <div class="logo" loading="lazy"><p>Tshepang Kagiso</p></div>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="./Projects/projects.html">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button id="downloadButton">Download CV</button>
-            </nav>
-        </header>
-    
-        <section class="introContainer" id="about">
-            <div class="headings">
-                <h1>Hi, I'm Tshepang Kagiso Mashigo</h1>
-                <h2>Software Engineering, Bachelor of Computing Science Final Year Student</h2>
+    <header>
+        <nav>
+            <div class="logo">TKM</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button id="downloadCV" class="cta-button">Download CV</button>
+                <button id="downloadTranscript" class="cta-button">Download Transcript</button>
             </div>
-        
-            <div class="intro">
-                <p>As a diligent and hardworking software engineering student with a deep interest in developing backend solutions. Passionate about applying intricate business logic to APIs and integrating them seamlessly with databases to create fresh, innovative systems. Committed to continuous learning and staying up-to-date with new technologies to effectively address business and client needs through IT solutions.</p>
-                <p>My determination extends beyond the boundaries of my degree, as I actively seek out opportunities to enhance my knowledge and skills. Investing in paid courses has been a cornerstone of my journey, allowing me to delve deeper into the intricacies of building software for large-scale, contemporary applications. By staying abreast of the latest technologies and methodologies, I am equipped to tackle diverse challenges and effectively address the needs of businesses and clients through innovative IT solutions.</p>            
-            </div>
+        </nav>
+    </header>
 
-            <div class="imageFrame">
-                <img src="./images/Selected photo.jpg" alt="Your Image">
+    <main>
+        <section id="home" class="hero">
+            <h1></h1>
+            <h2></h2>
+            <a href="#about" class="scroll-down">
+                <span class="arrow"></span>
+            </a>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I am a dedicated and hard-working software engineering student with a strong enthusiasm for backend technologies. Driven by the challenge of implementing sophisticated business logic into APIs and seamlessly integrating them with databases to innovate and create cutting-edge systems. </p>
+                        <br>
+                        <p>I am also committed to ongoing learning and being aware of emerging technologies to meet the evolving demands of businesses and clients through effective IT solutions.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="./images/Selected photo.jpg" alt="Tshepang Kagiso Mashigo" loading="lazy">
+                    </div>
+                </div>
             </div>
- 
-            <button class="contactMeBtn" id="goProjects">Explore My Projects</button>
         </section>
-    
-        <section class="skill" id="skills">
-            <div class="skillsContainer">
-                <div class="skillCard">
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>C#</li>
-                        <li>Javascript</li>
-                        <li>Html</li>
-                        <li>Css</li>
-                    </ul>
+
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2>My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <ul>
+                            <li>C#
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="70"></div>
+                                </div>
+                            </li>
+                            <li>JavaScript
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="70"></div>
+                                </div>
+                            </li>
+                            <li>HTML & CSS
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="65"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend Technologies</h3>
+                        <ul>
+                            <li>ASP.NET
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                            </li>
+                            <li>Node.js
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="70"></div>
+                                </div>
+                            </li>
+                            <li>Express.js
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <ul>
+                            <li>Microsoft SQL Server
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="70"></div>
+                                </div>
+                            </li>
+                            <li>MongoDB
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="60"></div>
+                                </div>
+                            </li>
+                            <li>SQLite
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="60"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Other Technical Skills</h3>
+                        <ul>
+                            <li>RESTful API Development
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                            </li>
+                            <li>Version Control (Git)
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="65"></div>
+                                </div>
+                            </li>
+                            <li>Agile Methodologies
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="60"></div>
+                                </div>
+                            </li>
+                            <li>Machine Learning Algorithms
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="70"></div>
+                                </div>
+                            </li>
+                            <li>Software Architecture and Design
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="65"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Soft Skills</h3>
+                        <ul>
+                            <li>Communication
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="70"></div>
+                                </div>
+                            </li>
+                            <li>Teamwork and Collaboration
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="70"></div>
+                                </div>
+                            </li>
+                            <li>Adaptability
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            
-                <div class="skillCard">
-                    <h3>Backend Technologies</h3>
-                    <ul>
-                        <li>ASP.NET</li>
-                        <li>Node.js</li>
-                        <li>Express.js</li>
-                    </ul>
-                </div>
-            
-                <div class="skillCard">
-                    <h3>Databases</h3>
-                    <ul>
-                        <li>Microsoft SQLserver</li>
-                        <li>MongoDB</li>
-                        <li>SQLite</li>
-                    </ul>
-                </div>
-            
-                <div class="skillCard">
-                    <h3>Other Skills</h3>
-                    <ul>
-                        <li>API Development</li>
-                        <li>RESTful Services</li>
-                        <li>Version Control (Git)</li>
-                        <li>Agile Methodologies</li>
-                        <li>Machine Learning Algorithms</li>
-                        <li>Software Architecture</li>
-                    </ul>
-                </div>
-            </div>    
+            </div>
         </section>
-    
-        <section class="ContactFormSec" id="contact">
-            <section class="ContactForm" loading="lazy">
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>My Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="./images/innovationHub.jpg" alt="Innovation Hub Website" loading="lazy" class="project-pic">
+                        <h3>Innovation Hub Website</h3>
+                        <p>Built using HTML, CSS, and JS. Currently still in the works, as I'm looking to add a backend using ASP.NET.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/tshepangkagiso/innovation-hub" target="_blank" class="project-link">GitHub</a>
+                            <a href="https://innovation-hub-pxhd.onrender.com/" target="_blank" class="project-link">Live</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="./images/wiredMindsBc.jpg" alt="WiredMinds-BC Website" loading="lazy" class="project-pic">
+                        <h3>WiredMinds-BC Website</h3>
+                        <p>Built a backend system with authorization, authentication, and route protection using Node.js and Express.js. Used EJS for frontend templating and JWT for authentication.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/tshepangkagiso/Wired-Minds-BC-Hub" target="_blank" class="project-link">GitHub</a>
+                            <a href="https://wired-bc.onrender.com" target="_blank" class="project-link">Live</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="./images/DatabaseProjectPic.jpg" alt="Microsoft SQL Server TSQL Script" loading="lazy" class="project-pic">
+                        <h3>Microsoft SQL Server TSQL Script</h3>
+                        <p>Built a database using TSQL in Microsoft SQL Server. Includes user roles, authentication, transactions, and more. Final project for database development module.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/tshepangkagiso/sqlserver-database-project-dbd271" target="_blank" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
                 <h2>Contact Me</h2>
-                <form action="https://formsubmit.co/tshepangkagisomashigo8@gmail.com" method="POST">
-                    <input type="hidden" name="_next" value="https://tshepangkagisomashigoportfolio.onrender.com/index.html">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required placeholder="Your name">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="Email Address">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required placeholder="Message.."></textarea>
-                    <button id="btnForm" type="submit">Send Message</button>
+                <form id="contactForm" action="https://formsubmit.co/tshepangkagisomashigo8@gmail.com" method="POST">
+                    <input type="hidden" name="_next" value="_Return">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="name" required placeholder="Your Name">
+                    <input type="email" name="email" required placeholder="Your Email">
+                    <textarea name="message" required placeholder="Your Message"></textarea>
+                    <button type="submit" class="cta-button">Send Message</button>
                 </form>
-            </section>
-            
-        </section>
-        <footer>
-            <div class="footerContainer">
-                <div class="footerContact">
-                    <p>Email: tshepangkagisomashigo8@gmail.com</p>
-                </div>
-                <div class="footerSocial">
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/tshepang-kagiso-mashigo-592a19264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a></li>
-                        <li><a href="https://github.com/tshepangkagiso" target="_blank">GitHub</a></li>
-                    </ul>
-                </div>
             </div>
-        </footer>
-    </div>
+        </section>
+    </main>
 
+    <footer>
+        <div class="container">
+            <p>Email: tshepangkagisomashigo8@gmail.com</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/tshepang-kagiso-mashigo-592a19264" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/tshepangkagiso" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
