@@ -26,12 +26,13 @@ function downloadCV() {
 
 // Download Transcript function
 function downloadTranscript() {
-    const link = document.createElement('a');
+    /*const link = document.createElement('a');
     link.href = 'resources/Tshepang Mashigo Transcript.pdf';
     link.download = 'Tshepang Mashigo Transcript.pdf';
     document.body.appendChild(link);
     link.click();
-    document.body.removeChild(link);
+    document.body.removeChild(link);*/
+    window.alert("Academic transcripts are available upon request, due to containing sensitive information and to get the latest results.")
 }
 
 // Scroll reveal animations
