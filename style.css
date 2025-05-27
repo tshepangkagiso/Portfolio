@@ -288,8 +288,88 @@ nav a:hover, nav a.active {
     background-color: #3da15a;
 }
 
+
+
+
+.leadership {
+   background-color: var(--section-bg-2);
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.leadership-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--primary-color);
+}
+
+.leadership-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.leadership-header {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 1rem;
+}
+
+.leadership-header h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.leadership-company {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.leadership-period {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.leadership-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.leadership-content li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.leadership-content li:before {
+    content: '▸';
+    color: var(--secondary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.leadership-content li:last-child {
+    margin-bottom: 0;
+}
+
+
 .contact {
-    background-color: var(--section-bg-2);
+    background-color: var(--header-bg);
 }
 
 form {
@@ -393,5 +473,17 @@ footer {
     .about-text {
         padding-right: 0;
         margin-bottom: 2rem;
+    }
+        .leadership-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .leadership-card {
+        padding: 1.5rem;
+    }
+    
+    .leadership-header h3 {
+        font-size: 1.2rem;
     }
 }
