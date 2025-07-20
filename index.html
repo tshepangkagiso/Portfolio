@@ -3,346 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tshepang Kagiso Mashigo | Portfolio</title>
+    <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="app.js" type="module" defer></script>
 </head>
 <body>
-    <div id="loading-overlay">
-        <div class="spinner"></div>
+    <!-- Scroll Progress -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
     </div>
 
-    <header>
-        <nav>
-            <div class="logo">TKM</div>
-            <ul>
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Tshepang Kagiso Mashigo</div>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#Leadership_Experience">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="nav-buttons">
-                <button id="downloadCV" class="cta-button">Download CV</button>
-            </div>            
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main>
-        <section id="home" class="hero">
-            <h1></h1>
-            <h2></h2>
-            <a href="#about" class="scroll-down">
-                <span class="arrow"></span>
-            </a>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                      
-                    <div class="about-text">
-                        <p>Dedicated and hard-working software engineering student with a passion for backend technologies. Motivated by the challenge of implementing complex business logic in APIs and integrating them with databases to build scalable, cutting-edge systems. </p>
-                        <br>
-                        <p>Committed to continuous learning and staying current with emerging technologies to deliver impactful and innovative IT solutions.</p>
-                    </div>
-                    <div class="about-image">
-                        <img src="./images/Selected photo.jpg" alt="Tshepang Kagiso Mashigo" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="Leadership_Experience" class="leadership">
-            <div class="container">
-                <h2>Leadership & Experience</h2>
-                <div class="leadership-grid">
-                    <div class="leadership-card">
-                        <div class="leadership-header">
-                            <h3>Student Representative Council (SRC) Head of Department</h3>
-                            <div class="leadership-company">Belgium Campus iTversity</div>
-                            <div class="leadership-period">2023 – 2024</div>
-                        </div>
-                        <div class="leadership-content">
-                            <ul>
-                                <li>Led and managed the Student Relations Department, driving initiatives to enhance student engagement and communication.</li>
-                                <li>Mentored first-year SRC members, developing their leadership skills and fostering effective contributions to the council.</li>
-                                <li>Recognized for exemplary leadership, professionalism, and innovation, leaving a lasting positive impact on the SRC and student body.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="leadership-card">
-                        <div class="leadership-header">
-                            <h3>Peer Tutor</h3>
-                            <div class="leadership-company">Belgium Campus iTversity</div>
-                            <div class="leadership-period">2024 – 2024</div>
-                        </div>
-                        <div class="leadership-content">
-                            <ul>
-                                <li>Provided academic tutoring in Mathematics, Machine Learning, and Linear Programming for undergraduate Computing and IT students.</li>
-                                <li>Demonstrated exceptional organization and time management in preparing and delivering effective tutoring sessions.</li>
-                                <li>Maintained high professionalism in all interactions with students, lecturers, and support staff.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="leadership-card">
-                        <div class="leadership-header">
-                            <h3>Student Representative Council (SRC) Member</h3>
-                            <div class="leadership-company">Belgium Campus iTversity</div>
-                            <div class="leadership-period">2022 – 2023</div>
-                        </div>
-                        <div class="leadership-content">
-                            <ul>
-                                <li>Represented student body interests.</li>
-                                <li>Organized events and initiatives to enhance student life.</li>
-                                <li>Participated in strategic planning and departmental feedback sessions.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2>My Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <img src="./images/Drone.png" alt="Security Drone" loading="lazy" class="project-pic">
-                        <h3>Security Drone Monitoring System, Full-Stack IoT Surveillance</h3>
-                        <p>Developed a full-stack security system integrating DJI Tello drones with real-time video streaming, threat detection, and automated patrols using a modular multi-server architecture.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/tshepangkagiso/Project_381_DroneInnovatonGroup5.git" target="_blank" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="./images/Ecommerce.png" alt="Ecommerce-Microservices" loading="lazy" class="project-pic">
-                        <h3>E-Commerce Microservices Shop, Cloud-Native Full-Stack Project</h3>
-                        <p>Built a cloud-native e-commerce application using .NET 9 with a microservices architecture focused on DDD, CQRS, and Clean Architecture.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/tshepangkagiso/Ecommerce-Microservices.git" target="_blank" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="./images/wiredMindsBc.jpg" alt="WiredMinds-BC Website" loading="lazy" class="project-pic">
-                        <h3>WiredMinds-BC Website</h3>
-                        <p>Built a backend system with authorization, authentication, and route protection using Node.js and Express.js. Used EJS for frontend templating and JWT for authentication.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/tshepangkagiso/Wired-Minds-BC-Hub" target="_blank" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="./images/DatabaseProjectPic.jpg" alt="Microsoft SQL Server TSQL Script" loading="lazy" class="project-pic">
-                        <h3>Microsoft SQL Server TSQL Script</h3>
-                        <p>Built a database using TSQL in Microsoft SQL Server. Includes user roles, authentication, transactions, and more. Final project for database development module.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/tshepangkagiso/sqlserver-database-project-dbd271" target="_blank" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="./images/innovationHub.jpg" alt="Innovation Hub Website" loading="lazy" class="project-pic">
-                        <h3>Innovation Hub Website</h3>
-                        <p>Built using HTML, CSS, and JS. Currently still in the works, as I'm looking to add a backend using ASP.NET.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/tshepangkagiso/innovation-hub" target="_blank" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2>My Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Programming Languages</h3>
-                        <ul>
-                            <li>C#
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="70"></div>
-                                </div>
-                            </li>
-                            <li>Python
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="70"></div>
-                                </div>
-                            </li>
-                            <li>JavaScript
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="70"></div>
-                                </div>
-                            </li>
-                            <li>HTML & CSS
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="65"></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Backend Technologies</h3>
-                        <ul>
-                            <li>ASP.NET
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="75"></div>
-                                </div>
-                            </li>
-                            <li>Node.js
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="55"></div>
-                                </div>
-                            </li>
-                            <li>Express.js
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="55"></div>
-                                </div>
-                            </li>
-                            <li>Flask
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="50"></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Databases</h3>
-                        <ul>
-                            <li>Microsoft SQL Server
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="70"></div>
-                                </div>
-                            </li>
-                            <li>PostgreSQL
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="60"></div>
-                                </div>
-                            </li>
-                            <li>MongoDB
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="60"></div>
-                                </div>
-                            </li>
-                            <li>SQLite
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="60"></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Tools & Technologies</h3>
-                        <ul>
-                            <li>RESTful API Development
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="75"></div>
-                                </div>
-                            </li>
-                            <li> gRPC
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="40"></div>
-                                </div>
-                            </li>                            
-                            <li>Version Control (Git)
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="65"></div>
-                                </div>
-                            </li>
-                            <li>Agile Methodologies
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="60"></div>
-                                </div>
-                            </li>
-
-                            <li>Docker & Kubernetes
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="55"></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Software Design & Concepts</h3>
-                        <ul>
-                            <li>Software Architecture
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="65"></div>
-                                </div>
-                            </li>
-                            <li>DDD
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="40"></div>
-                                </div>
-                            </li>
-                            <li>CQRS
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="40"></div>
-                                </div>
-                            </li>
-                            <li>Clean Architecture
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="40"></div>
-                                </div>
-                            </li>
-                            <li>Machine Learning
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="75"></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Soft Skills</h3>
-                        <ul>
-                            <li>Communication
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="70"></div>
-                                </div>
-                            </li>
-                            <li>Teamwork and Collaboration
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="70"></div>
-                                </div>
-                            </li>
-                            <li>Adaptability
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="80"></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 style="color: white;">Contact Me</h2>
-                <form id="contactForm" action="https://formsubmit.co/tshepangkagisomashigo8@gmail.com" method="POST">
-                    <input type="hidden" name="_next" value="https://tshepangkagisomashigoportfolio.onrender.com/">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="text" name="name" required placeholder="Your Name">
-                    <input type="email" name="email" required placeholder="Your Email">
-                    <textarea name="message" required placeholder="Your Message"></textarea>
-                    <button type="submit" class="cta-button">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>Email: tshepangkagisomashigo8@gmail.com</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/tshepang-kagiso-mashigo-592a19264" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://github.com/tshepangkagiso" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bachelor of Computing Science Student</h1>
+            <p>Full Stack Development • Backend Development • Desktop Development • Microservices • Cloud Native Systems • DevOps</p>
+            <p>Passionate about clean architecture and building scalable solutions</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
             </div>
         </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Languages & Frameworks</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">ASP.NET Core</span>
+                    <span class="skill-tag">Swing</span>
+                    <span class="skill-tag">JSP</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Backend & Architecture</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">Microservices</span>
+                    <span class="skill-tag">Clean Architecture</span>
+                    <span class="skill-tag">DDD</span>
+                    <span class="skill-tag">CQRS</span>
+                    <span class="skill-tag">SOLID Principles</span>
+                    <span class="skill-tag">OOP</span>
+                    <span class="skill-tag">DSA</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Databases & DevOps</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">SQL Server</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">gRPC</span>
+                    <span class="skill-tag">RabbitMQ</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Soft Skills & Leadership</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Communication</span>
+                    <span class="skill-tag">Teamwork</span>
+                    <span class="skill-tag">Adaptability</span>
+                    <span class="skill-tag">Mentoring</span>
+                    <span class="skill-tag">Leadership</span>
+                    <span class="skill-tag">Problem Solving</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>🚁 Security Drone Monitoring System</h3>
+                <p>Real-time drone surveillance platform with YOLO threat detection, live streaming, and autonomous patrol capabilities. Features JWT authentication and real-time communication.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">OpenCV</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Socket.IO</span>
+                    <span class="tech-tag">YOLO</span>
+                    <span class="tech-tag">JWT</span>
+                </div>
+                <a href="https://github.com/tshepangkagiso/Project_381_DroneInnovatonGroup5.git" class="btn btn-primary">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>🛒 E-Commerce Microservices Shop</h3>
+                <p>Modular .NET 9 microservices architecture implementing DDD, CQRS, and Clean Architecture patterns. Features gRPC communication, message queuing, and API Gateway.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">.NET 9</span>
+                    <span class="tech-tag">DDD</span>
+                    <span class="tech-tag">CQRS</span>
+                    <span class="tech-tag">gRPC</span>
+                    <span class="tech-tag">RabbitMQ</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">YARP</span>
+                </div>
+                <a href="https://github.com/tshepangkagiso/Ecommerce-Microservices.git" class="btn btn-primary">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>🏥 BC Wellness Management System</h3>
+                <p>Comprehensive wellness management solution with JSP web interface and Swing desktop application. Implements MVC pattern with full CRUD operations and session management.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">JSP</span>
+                    <span class="tech-tag">Swing</span>
+                    <span class="tech-tag">MVC</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">JavaDB</span>
+                </div>
+                <a href="https://github.com/tshepangkagiso/BC-Student-Wellness-Management-System.git" class="btn btn-primary">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title">Experience & Leadership</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Head of Department, SRC</h3>
+                    <div class="timeline-date">2023 – 2024</div>
+                    <p>Led the Student Relations Department at Belgium Campus iTversity, mentored team members, and spearheaded student engagement initiatives.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Peer Tutor</h3>
+                    <div class="timeline-date">2024</div>
+                    <p>Tutored fellow students in Mathematics, Machine Learning, and Linear Programming, helping improve academic outcomes.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>SRC Member</h3>
+                    <div class="timeline-date">2022 – 2023</div>
+                    <p>Student Representative Council member representing student interests, co-organizing events, and contributing to strategic planning initiatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title">Education & Certifications</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>🎓 Bachelor of Computing Science</h3>
+                <p>Belgium Campus iTversity</p>
+                <p>Comprehensive program covering software engineering, algorithms, data structures, and modern development practices.</p>
+            </div>
+            <div class="project-card">
+                <h3>📚 Specialized Courses</h3>
+                <p>Udemy Professional Development</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Software Architecture</span>
+                    <span class="tech-tag">ASP.NET Core Identity</span>
+                    <span class="tech-tag">Cloud-Native Development</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>📋 Academic Credentials</h3>
+                <p>Official academic transcript and letters of recommendation from SRC Head of Department and Peer Tutor positions available upon request.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Academic Transcript</span>
+                    <span class="tech-tag">Leadership References</span>
+                    <span class="tech-tag">Tutoring References</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="hero-content">
+            <p>Ready to contribute to innovative projects and grow in a professional engineering environment. Let's discuss opportunities!</p>
+            <div class="cta-buttons">
+                <a href="mailto:tshepangkagisom@gmail,com" class="btn btn-primary">Send Email</a>
+                <a href="https://www.linkedin.com/in/tshepang-kagiso-mashigo-592a19264" class="btn btn-secondary">LinkedIn</a>
+                <a href="https://github.com/tshepangkagiso" class="btn btn-secondary">Github</a>
+    
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p>&copy; 2025 Tshepang Kagiso Mashigo Portfolio. Built with passion for clean code.</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
