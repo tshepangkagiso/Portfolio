@@ -69,7 +69,7 @@ window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
     if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        hero.style.transform = `translateY(${scrolled * 0.3}px)`;
     }
 });
 
@@ -106,3 +106,37 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Mobile menu functionality
+const mobileMenu = document.querySelector('.mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenu.addEventListener('click', () => {
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    navLinks.style.flexDirection = 'column';
+    navLinks.style.position = 'absolute';
+    navLinks.style.top = '100%';
+    navLinks.style.left = '0';
+    navLinks.style.width = '100%';
+    navLinks.style.backgroundColor = 'var(--primary-bg)';
+    navLinks.style.padding = '1rem';
+    navLinks.style.borderTop = '1px solid rgba(255, 255, 255, 0.1)';
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            navLinks.style.display = 'none';
+        }
+    });
+});
+
+// Add loading animation
+window.addEventListener('load', () => {
+    document.body.style.opacity = '1';
+});
+
+// Initialize
+document.body.style.opacity = '0';
+document.body.style.transition = 'opacity 0.5s ease-in-out';
