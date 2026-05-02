@@ -2,39 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tshepang Mashigo - Software Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Tshepang Mashigo | Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Scroll Progress -->
-    <div class="scroll-indicator">
-        <div class="scroll-progress" id="scrollProgress"></div>
-    </div>
+    <!-- Custom Cursor (Desktop only elegance) -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
 
-    <!-- Background Animation -->
-    <div class="bg-animation">
-        <div class="floating-shapes">
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
-        </div>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-bar">
+        <div class="scroll-progress-fill" id="scrollFill"></div>
     </div>
 
     <!-- Navigation -->
-    <nav>
+    <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Tshepang Kagiso Mashigo</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-menu">
+            <div class="logo">
+                <div class="logo-avatar">
+                    <img src="./images/Me.jpg" alt="Me" class="avatar-img" id="profileAvatar">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-first">T</span><span class="logo-mid">K</span><span class="logo-last">M</span>
+                    <span class="logo-dot">.</span>
+                </div>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
@@ -42,348 +49,367 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Tshepang Kagiso Mashigo</h1>
-            <div class="hero-subtitle">Software Engineer</div>
-            <p>
-                I’m an Honours Bachelor of Computing Science student with a specialization in Software Engineering, focused on building scalable, reliable software systems and solving complex engineering problems.
-            </p>
-            <p>
-               <b>I’m currently seeking a software engineering internship or junior role focused on backend or full-stack development, where I can contribute to building scalable, high-impact systems.</b> 
-            </p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        <div class="hero-container">
+            <div class="hero-badge">
+                <span class="badge-dot"></span> Available for opportunities
             </div>
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/tshepang-kagiso-mashigo-592a19264" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
+            <h1 class="hero-title">
+                Tshepang Kagiso<br>Mashigo
+            </h1>
+            <div class="hero-subtitle-wrapper">
+                <div class="hero-subtitle-prefix">//</div>
+                <div class="hero-subtitle">Software Engineer</div>
+            </div>
+            <p class="hero-description">
+                I'm an Honours Bachelor of Computing Science student with a specialization in Software Engineering, focused on building scalable, reliable software systems and solving complex engineering problems.
+            </p>
+            <p class="hero-highlight">
+                <strong>I'm currently seeking a software engineering internship or junior role focused on backend or full-stack development, where I can contribute to building scalable, high-impact systems.</strong>
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">
+                    View Projects <i class="fas fa-arrow-right"></i>
                 </a>
-                <a href="https://github.com/tshepangkagiso" target="_blank" title="GitHub">
+                <a href="#contact" class="btn-outline">
+                    Get In Touch <i class="fas fa-send"></i>
+                </a>
+            </div>
+            <div class="hero-social">
+                <a href="https://www.linkedin.com/in/tshepang-kagiso-mashigo-592a19264" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/tshepangkagiso" target="_blank" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="mailto:tshepangkagisom@gmail.com" title="Email">
-                    <i class="fas fa-envelope"></i>
+                <a href="mailto:tshepangkagisom@gmail.com" aria-label="Email">
+                    <i class="far fa-envelope"></i>
                 </a>
-                <a href="tel:0660087763" title="Phone">
-                    <i class="fas fa-phone"></i>
+                <a href="tel:0660087763" aria-label="Phone">
+                    <i class="fas fa-phone-alt"></i>
                 </a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">4+</span>
+                <span class="stat-label">Years Coding</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">30+</span>
+                <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">Backend</span>
+                <span class="stat-label">C# | Java | Javascript</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">Cloud</span>
+                <span class="stat-label">Cloud Native Architecture</span>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>
-                    As a Bachelor of Computing Science student with a specialization in Software Engineering, passionate about building scalable, real-world software systems that make an impact.
-                </p>
-                <br>
-
-                <p>
-                    I specialize in backend and microservices development using .NET, Java, and Python, with hands-on experience designing distributed, cloud-native applications on Microsoft Azure. I enjoy solving complex problems—from architecting event-driven systems with RabbitMQ to building real-time applications with SignalR and integrating modern tools like Docker and Kubernetes.
-                </p>
-                <br>
-
-                <p>
-                    In addition, I have strong full-stack capabilities, working with Angular, JavaScript, HTML, and CSS to build responsive, user-focused interfaces. I also have solid experience in database development using SQL Server and PostgreSQL, and I’m confident in translating project requirements into well-designed databases and complete applications—from backend logic to frontend and cloud deployment.
-                </p>
-                <br>
-                
-                <p>
-                    Beyond development, I’ve taken on leadership and mentoring roles as Head of Student Relations and a Peer Tutor, supporting students in Mathematics, Machine Learning, and Linear Programming—strengthening my communication and collaboration skills.
-                </p>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">About Me</div>
+                <h2 class="section-title">Engineering Excellence</h2>
+                <div class="section-divider"></div>
             </div>
-            <div class="about-highlights">
-                <div class="highlight-card">
-                    <i class="fas fa-code"></i>
-                    <h4>Backend Engineering</h4>
-                    <p>Backend systems development with modern frameworks</p>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>As a Bachelor of Computing Science student with a specialization in Software Engineering, passionate about building scalable, real-world software systems that make an impact.</p>
+                    <br>
+                    <p>I specialize in backend and microservices development using .NET, Java, and Python, with hands-on experience designing distributed, cloud-native applications on Microsoft Azure. I enjoy solving complex problems—from architecting event-driven systems with RabbitMQ to building real-time applications with SignalR and integrating modern tools like Docker and Kubernetes.</p>
+                    <br>
+                    <p>In addition, I have strong full-stack capabilities, working with Angular, JavaScript, HTML, and CSS to build responsive, user-focused interfaces. I also have solid experience in database development using SQL Server and PostgreSQL, and I'm confident in translating project requirements into well-designed databases and complete applications—from backend logic to frontend and cloud deployment.</p>
+                    <br>
+                    <p>Beyond development, I've taken on leadership and mentoring roles as Head of Student Relations and a Peer Tutor, supporting students in Mathematics, Machine Learning, and Linear Programming—strengthening my communication and collaboration skills.</p>
                 </div>
-                <div class="highlight-card">
-                    <i class="fas fa-cloud"></i>
-                    <h4>Cloud-Native</h4>
-                    <p>Microservices architecture and containerized applications</p>
-                </div>
-                <div class="highlight-card">
-                    <i class="fas fa-users"></i>
-                    <h4>Leadership</h4>
-                    <p>Team management and peer mentoring experience</p>
-                </div>
-                <div class="highlight-card">
-                    <i class="fas fa-brain"></i>
-                    <h4>Problem Solving</h4>
-                    <p>Strong analytical skills and clean code principles</p>
+                <div class="about-cards">
+                    <div class="stat-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Backend Engineering</h3>
+                        <p>Modern frameworks & microservices architecture</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Cloud-Native</h3>
+                        <p>Azure, Docker, Kubernetes, event-driven systems</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Leadership</h3>
+                        <p>Team management & peer mentoring experience</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Problem Solving</h3>
+                        <p>Clean code, DSA, analytical mindset</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
-        <h2 class="section-title">Technical Expertise</h2>
-        <div class="skills-grid">
-
-            <div class="skill-category">
-                <h3>Programming Languages</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">C#</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">TypeScript</span>
-                    <span class="skill-tag">HTML & CSS</span>
-                </div>
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Technical Expertise</div>
+                <h2 class="section-title">Core Competencies</h2>
+                <div class="section-divider"></div>
             </div>
-
-            <div class="skill-category">
-                <h3>Frameworks & Libraries</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">ASP.NET Core</span>
-                    <span class="skill-tag">Angular</span>
-                    <span class="skill-tag">Flask</span>
-                    <span class="skill-tag">Node.js & Express.js</span>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3><i class="fas fa-terminal"></i> Languages</h3>
+                    <div class="skill-list">
+                        <span>C#</span><span>Java</span><span>Python</span>
+                        <span>JavaScript</span><span>TypeScript</span><span>HTML & CSS</span>
+                    </div>
                 </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Databases</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Microsoft SQL Server</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">SQLite</span>
-                    <span class="skill-tag">MongoDB</span>
+                <div class="skill-group">
+                    <h3><i class="fas fa-cube"></i> Frameworks</h3>
+                    <div class="skill-list">
+                        <span>ASP.NET Core</span><span>Springboot</span><span>Angular</span>
+                        <span>Flask</span><span>Node.js</span><span>Express.js</span>
+                    </div>
                 </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Infrastructure & Tools</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">RabbitMQ</span>
-                    <span class="skill-tag">Kubernetes</span>
-                    <span class="skill-tag">Microsoft Azure</span>
+                <div class="skill-group">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <div class="skill-list">
+                        <span>SQL Server</span><span>PostgreSQL</span>
+                        <span>SQLite</span><span>MongoDB</span>
+                    </div>
                 </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Core Concepts</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">REST APIs</span>
-                    <span class="skill-tag">Microservices</span>
-                    <span class="skill-tag">OOP</span>
-                    <span class="skill-tag">Data Structures & Algorithms</span>
-                    <span class="skill-tag">Cloud Native Architecture</span>
-                    <span class="skill-tag">MVC</span>
-                    <span class="skill-tag">Machine Learning</span>
+                <div class="skill-group">
+                    <h3><i class="fas fa-cloud"></i> Infrastructure</h3>
+                    <div class="skill-list">
+                        <span>Docker</span><span>Kubernetes</span><span>RabbitMQ</span>
+                        <span>Azure</span><span>Git</span>
+                    </div>
                 </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Soft Skills</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Collaboration</span>
-                    <span class="skill-tag">Communication</span>
-                    <span class="skill-tag">Adaptability</span>
+                <div class="skill-group">
+                    <h3><i class="fas fa-microchip"></i> Core Concepts</h3>
+                    <div class="skill-list">
+                        <span>REST APIs</span><span>Microservices</span><span>OOP</span>
+                        <span>DSA</span><span>Cloud Native</span><span>Machine Learning</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3><i class="fas fa-handshake"></i> Soft Skills</h3>
+                    <div class="skill-list">
+                        <span>Collaboration</span><span>Communication</span><span>Adaptability</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>🚁 Security Drone Monitoring System</h3>
-                <p>Developed a real-time drone surveillance platform using Python for machine learning and drone communication. Created a dashboard with JavaScript backend technologies, implementing user authentication and authorization via JWT. Key features include YOLO-based threat detection, live video streaming, and autonomous patrol capabilities.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">YOLO</span>
-                    <span class="tech-tag">JWT</span>
-                    <span class="tech-tag">Machine Learning</span>
-                    <span class="tech-tag">OpenCV</span>
-                </div>
-                <a href="https://github.com/tshepangkagiso/Project_381_DroneInnovatonGroup5.git" class="btn btn-primary" target="_blank">View on GitHub</a>
+    <!-- Projects Section with Images -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Portfolio</div>
+                <h2 class="section-title">Featured Work</h2>
+                <div class="section-divider"></div>
             </div>
-            
-            <div class="project-card">
-                <h3>🎓 CampusLearn Peer-to-Peer Tutoring Application</h3>
-                <p>Built a .NET- and Angular-based microservices platform with secure JWT authentication, real-time SignalR messaging, RabbitMQ event handling, and MinIO/Seq integration. Delivered features for peer tutoring, anonymous forums, AI-assisted support, and 1-on-1 student tutor communication.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">.NET Core</span>
-                    <span class="tech-tag">Docker</span>
-                    <span class="tech-tag">Angular</span>
-                    <span class="tech-tag">Signal R</span>
-                    <span class="tech-tag">RabbitMQ</span>
-                    <span class="tech-tag">Serilog & Seq</span>
-                    <span class="tech-tag">n8n AI Agent</span>
-                    <span class="tech-tag">SqlServer</span>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./images/inova.png" alt="iNOVA Bank Platform">
+                    </div>
+                    <h3>🏦 iNOVA Bank — Cloud-Native Digital Banking Platform</h3>
+                    <p>Built a cloud-native digital banking platform using Springboot, Angular and PostgreSQL that simulates secure banking operations with savings/check accounts, transaction auditing, JWT security, and full deployment on Microsoft Azure using Docker, Azure Container Apps, and Azure Web Apps.</p>
+                    <div class="project-techs">
+                        <span>Springboot</span><span>Docker</span><span>Angular</span><span>PostgreSQL</span><span>Azure</span>
+                    </div>
+                    <a href="https://github.com/tshepangkagiso/OnlineBankingSystemApplication" class="project-link" target="_blank">View on GitHub <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <a href="https://github.com/tshepangkagiso/CampusLearnApplication.git" class="btn btn-primary" target="_blank">View on GitHub</a>
-            </div>
-            
-            <div class="project-card">
-                <h3>🏥 BC Wellness Management System</h3>
-                <p>Developed a wellness management application featuring a JSP login system and a Swing desktop app. Applied MVC architecture, Core Java OOP principles, and implemented full CRUD operations with PostgreSQL and JavaDB. Included data validation and session handling for secure user management.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Java</span>
-                    <span class="tech-tag">JSP</span>
-                    <span class="tech-tag">Swing</span>
-                    <span class="tech-tag">MVC</span>
-                    <span class="tech-tag">PostgreSQL</span>
-                    <span class="tech-tag">JavaDB</span>
-                    <span class="tech-tag">CRUD</span>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./images/campuslearn.png" alt="CampusLearn Platform">
+                    </div>
+                    <h3>🎓 CampusLearn — Peer-to-Peer Tutoring Platform</h3>
+                    <p>Built a .NET- and Angular-based microservices platform with secure JWT authentication, real-time SignalR messaging, RabbitMQ event handling, and MinIO/Seq integration. Features peer tutoring, anonymous forums, AI-assisted support, and 1-on-1 student-tutor communication.</p>
+                    <div class="project-techs">
+                        <span>.NET Core</span><span>SignalR</span><span>RabbitMQ</span><span>Angular</span><span>SQL Server</span>
+                    </div>
+                    <a href="https://github.com/tshepangkagiso/CampusLearnApplication.git" class="project-link" target="_blank">View on GitHub <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <a href="https://github.com/tshepangkagiso/BC-Student-Wellness-Management-System.git" class="btn btn-primary" target="_blank">View on GitHub</a>
-            </div>
-
-            <div class="project-card">
-                <h3>🛒 E-Commerce Microservices Shop</h3>
-                <p>Built a cloud-native, containerized e-commerce system using modern .NET technologies. Implemented multiple independently deployable microservices with inter-service communication over HTTP (REST/gRPC) and asynchronous messaging via RabbitMQ.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">.NET Core</span>
-                    <span class="tech-tag">Docker</span>
-                    <span class="tech-tag">Kubernetes</span>
-                    <span class="tech-tag">gRPC</span>
-                    <span class="tech-tag">RabbitMQ</span>
-                    <span class="tech-tag">REST APIs</span>
-                    <span class="tech-tag">PostgreSQL</span>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./images/wellnessmanagement.png" alt="Wellness Management System">
+                    </div>
+                    <h3>🏥 BC Wellness Management System</h3>
+                    <p>Developed a wellness management application featuring a JSP login system and a Swing desktop app. Applied MVC architecture, Core Java OOP principles, and implemented full CRUD operations with PostgreSQL and JavaDB. Includes data validation and session handling.</p>
+                    <div class="project-techs">
+                        <span>Java</span><span>JSP</span><span>Swing</span><span>PostgreSQL</span><span>MVC</span>
+                    </div>
+                    <a href="https://github.com/tshepangkagiso/BC-Student-Wellness-Management-System.git" class="project-link" target="_blank">View on GitHub <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <a href="https://github.com/tshepangkagiso/Ecommerce-Microservices.git" class="btn btn-primary" target="_blank">View on GitHub</a>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./images/ecommerce.png" alt="E-Commerce Microservices">
+                    </div>
+                    <h3>🛒 E-Commerce Microservices Shop</h3>
+                    <p>Built a cloud-native, containerized e-commerce system using modern .NET technologies. Implemented multiple independently deployable microservices with inter-service communication over HTTP (REST/gRPC) and asynchronous messaging via RabbitMQ.</p>
+                    <div class="project-techs">
+                        <span>.NET Core</span><span>Docker</span><span>Kubernetes</span><span>gRPC</span><span>RabbitMQ</span>
+                    </div>
+                    <a href="https://github.com/tshepangkagiso/Ecommerce-Microservices.git" class="project-link" target="_blank">View on GitHub <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./images/drone.png" alt="Security Drone System">
+                    </div>
+                    <h3>🚁 Security Drone Monitoring System</h3>
+                    <p>Developed a real-time drone surveillance platform using Python for ML and drone communication. Dashboard with JavaScript backend, JWT authentication. Features YOLO-based threat detection, live video streaming, and autonomous patrol capabilities.</p>
+                    <div class="project-techs">
+                        <span>Python</span><span>YOLO</span><span>JWT</span><span>OpenCV</span><span>Machine Learning</span>
+                    </div>
+                    <a href="https://github.com/tshepangkagiso/Project_381_DroneInnovatonGroup5.git" class="project-link" target="_blank">View on GitHub <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
-        
     </section>
 
     <!-- Experience Section -->
-    <section id="experience">
-        <h2 class="section-title">Leadership & Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>SRC Head of Student Relations</h3>
-                    <div class="timeline-date">Belgium Campus iTversity • 2023–2024</div>
-                    <p>Represented student interests in campus decision-making, led engagement initiatives, mentored peers, and supported campus-wide communication as department head. Developed strong leadership and organizational skills while managing team responsibilities.</p>
-                </div>
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Leadership Journey</div>
+                <h2 class="section-title">Experience & Leadership</h2>
+                <div class="section-divider"></div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Peer Tutor</h3>
-                    <div class="timeline-date">Belgium Campus iTversity • 2023–2024</div>
-                    <p>Tutored students in Mathematics, Machine Learning, and Linear Programming, helping improve academic performance through one-on-one support. Enhanced communication skills and deepened understanding of complex technical concepts.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>SRC Head of Student Relations</h3>
+                        <div class="timeline-date">Belgium Campus iTversity • 2023–2024</div>
+                        <p>Represented student interests in campus decision-making, led engagement initiatives, mentored peers, and supported campus-wide communication as department head. Developed strong leadership and organizational skills while managing team responsibilities.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>SRC Member</h3>
-                    <div class="timeline-date">Belgium Campus iTversity • 2022–2023</div>
-                    <p>Active member of the Student Representative Council, contributing to student welfare initiatives and campus improvement projects. Collaborated with diverse teams and gained experience in strategic planning and event coordination.</p>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Peer Tutor</h3>
+                        <div class="timeline-date">Belgium Campus iTversity • 2023–2024</div>
+                        <p>Tutored students in Mathematics, Machine Learning, and Linear Programming, helping improve academic performance through one-on-one support. Enhanced communication skills and deepened understanding of complex technical concepts.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>SRC Member</h3>
+                        <div class="timeline-date">Belgium Campus iTversity • 2022–2023</div>
+                        <p>Active member of the Student Representative Council, contributing to student welfare initiatives and campus improvement projects. Collaborated with diverse teams and gained experience in strategic planning and event coordination.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education">
-        <h2 class="section-title">Education & Certifications</h2>
-        <div class="education-grid">
-            <div class="education-card">
-                <i class="fas fa-graduation-cap"></i>
-                <h3>Bachelor of Computing (Honours)</h3>
-                <div class="institution">Belgium Campus iTversity</div>
-                <p>• Current Average (after Year 3): 72.5%</p>
-                <p>• Year 4 (2026): Industry Internship & Honours</p>
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Academic Background</div>
+                <h2 class="section-title">Education & Certifications</h2>
+                <div class="section-divider"></div>
             </div>
-            
-            <div class="education-card">
-                <i class="fas fa-certificate"></i>
-                <h3>Software Architecture for Modern Large-Scale Systems</h3>
-                <div class="institution">Udemy Professional Development</div>
-                <p>Specialized course focusing on scalable system design, microservices architecture, and cloud-native development patterns. Enhanced understanding of distributed systems and modern architectural principles.</p>
-            </div>
-
-            <div class="education-card">
-                <i class="fas fa-certificate"></i>
-                <h3>Microsoft Azure: From Zero to Hero – The Complete Guide</h3>
-                <div class="institution">Udemy Professional Development</div>
-                <p>A 21-hour hands-on cloud architecture course on Microsoft Azure, covering core services (compute, networking, data, security, monitoring) and end-to-end application design on Azure.</p>
-            </div>
-            
-            <div class="education-card">
-                <i class="fas fa-school"></i>
-                <h3>Academic Credentials</h3>
-                <div class="institution"></div>
-                <p>Official academic transcript and letters of recommendation from SRC Head of Department and Peer Tutor positions available upon request.</p>
+            <div class="education-grid">
+                <div class="edu-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Bachelor of Computing (Honours)</h3>
+                    <div class="edu-institution">Belgium Campus iTversity</div>
+                    <p>• Current Average (after Year 3): 72.5%</p>
+                    <p>• Year 4 (2026): Industry Internship & Honours</p>
+                </div>
+                <div class="edu-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Software Architecture for Modern Large-Scale Systems</h3>
+                    <div class="edu-institution">Udemy Professional Development</div>
+                    <p>Specialized course focusing on scalable system design, microservices architecture, and cloud-native development patterns.</p>
+                </div>
+                <div class="edu-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Microsoft Azure: From Zero to Hero</h3>
+                    <div class="edu-institution">Udemy Professional Development</div>
+                    <p>21-hour hands-on cloud architecture course covering core services and end-to-end application design on Azure.</p>
+                </div>
+                <div class="edu-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Academic Credentials</h3>
+                    <div class="edu-institution"></div>
+                    <p>Official transcript and letters of recommendation available upon request.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2 class="section-title">Let's Connect</h2>
-        <p style="color: var(--text-secondary); font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-            Ready to contribute to innovative projects and grow in a professional engineering environment. Let's discuss opportunities where I can apply my skills and make a meaningful impact.
-        </p>
-        
-        <div class="contact-info">
-            <div class="contact-card">
-                <i class="fas fa-envelope"></i>
-                <h3>Email</h3>
-                <a href="mailto:tshepangkagisom@gmail.com">tshepangkagisom@gmail.com</a>
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Get In Touch</div>
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="section-divider"></div>
             </div>
-            
-            <div class="contact-card">
-                <i class="fas fa-phone"></i>
-                <h3>Phone</h3>
-                <a href="tel:0660087763">066 008 7763</a>
+            <p class="contact-intro">Ready to contribute to innovative projects and grow in a professional engineering environment. Let's discuss opportunities where I can apply my skills and make a meaningful impact.</p>
+            <div class="contact-grid">
+                <a href="mailto:tshepangkagisom@gmail.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>tshepangkagisom@gmail.com</p>
+                </a>
+                <a href="tel:0660087763" class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Phone</h3>
+                    <p>066 008 7763</p>
+                </a>
+                <a href="https://www.linkedin.com/in/tshepang-kagiso-mashigo-592a19264" target="_blank" class="contact-card">
+                    <i class="fab fa-linkedin-in"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Connect Professionally</p>
+                </a>
+                <a href="https://github.com/tshepangkagiso" target="_blank" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Explore Code Portfolio</p>
+                </a>
             </div>
-            
-            <div class="contact-card">
-                <i class="fab fa-linkedin"></i>
-                <h3>LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/tshepang-kagiso-mashigo-592a19264" target="_blank">Professional Profile</a>
+            <div class="contact-actions">
+                <a href="mailto:tshepangkagisom@gmail.com" class="btn-primary">Send Message <i class="fas fa-paper-plane"></i></a>
+                <a href="https://www.linkedin.com/in/tshepang-kagiso-mashigo-592a19264" class="btn-outline" target="_blank">Connect on LinkedIn <i class="fab fa-linkedin-in"></i></a>
             </div>
-            
-            <div class="contact-card">
-                <i class="fab fa-github"></i>
-                <h3>GitHub</h3>
-                <a href="https://github.com/tshepangkagiso" target="_blank">Code Portfolio</a>
-            </div>
-        </div>
-        
-        <div class="cta-buttons" style="margin-top: 3rem;">
-            <a href="mailto:tshepangkagisom@gmail.com" class="btn btn-primary">Send Email</a>
-            <a href="https://www.linkedin.com/in/tshepang-kagiso-mashigo-592a19264" class="btn btn-secondary" target="_blank">Connect on LinkedIn</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
-                <a href="#education">Education</a>
-                <a href="#contact">Contact</a>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">TKM.</div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#education">Education</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <p class="footer-copyright">© 2025 Tshepang Kagiso Mashigo. Built with precision and purpose.</p>
             </div>
-            <p style="color: var(--text-secondary);">&copy; 2025 Tshepang Kagiso Mashigo. Built with passion for clean code and modern web technologies.</p>
         </div>
     </footer>
 
-    <!-- Font Awesome for icons -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
