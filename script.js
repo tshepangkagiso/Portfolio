@@ -14,28 +14,20 @@ const cursorDot = document.querySelector('.cursor-dot');
 const cursorOutline = document.querySelector('.cursor-outline');
 
 if (window.innerWidth > 1024) {
+    let mouseX = 0, mouseY = 0, hoverScale = 1;
+    const applyTransform = () => {
+        if (cursorDot) cursorDot.style.transform = `translate(${mouseX - 3}px, ${mouseY - 3}px) scale(${hoverScale})`;
+        if (cursorOutline) cursorOutline.style.transform = `translate(${mouseX - 16}px, ${mouseY - 16}px) scale(${hoverScale})`;
+    };
     window.addEventListener('mousemove', (e) => {
-        const posX = e.clientX;
-        const posY = e.clientY;
-        
-        if (cursorDot) {
-            cursorDot.style.transform = `translate(${posX - 3}px, ${posY - 3}px)`;
-        }
-        if (cursorOutline) {
-            cursorOutline.style.transform = `translate(${posX - 16}px, ${posY - 16}px)`;
-        }
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        applyTransform();
     });
-    
     const interactiveElements = document.querySelectorAll('a, button, .btn-primary, .btn-outline, .project-card, .contact-card, .skill-group, .stat-card, .logo-avatar');
     interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            if (cursorOutline) cursorOutline.style.transform = `scale(1.5)`;
-            if (cursorDot) cursorDot.style.transform = `scale(1.5)`;
-        });
-        el.addEventListener('mouseleave', () => {
-            if (cursorOutline) cursorOutline.style.transform = `scale(1)`;
-            if (cursorDot) cursorDot.style.transform = `scale(1)`;
-        });
+        el.addEventListener('mouseenter', () => { hoverScale = 1.5; applyTransform(); });
+        el.addEventListener('mouseleave', () => { hoverScale = 1; applyTransform(); });
     });
 }
 
@@ -45,14 +37,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-        
+
         const target = document.querySelector(targetId);
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
-            
+
             const navLinks = document.getElementById('navLinks');
             if (navLinks && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
@@ -78,16 +70,16 @@ const navItems = document.querySelectorAll('.nav-link');
 window.addEventListener('scroll', () => {
     let current = '';
     const scrollPosition = window.scrollY + 100;
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
-        
+
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             current = section.getAttribute('id');
         }
     });
-    
+
     navItems.forEach(item => {
         item.classList.remove('active');
         const href = item.getAttribute('href').substring(1);
@@ -126,7 +118,7 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 50) {
         navbar.style.padding = '0.75rem 0';
         navbar.style.backgroundColor = 'rgba(5, 5, 8, 0.98)';
@@ -134,7 +126,7 @@ window.addEventListener('scroll', () => {
         navbar.style.padding = '1.25rem 0';
         navbar.style.backgroundColor = 'rgba(5, 5, 8, 0.95)';
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -181,7 +173,7 @@ if (profileAvatar) {
 
 // ===== CONSOLE GREETING =====
 console.log('%c Tshepang Kagiso Mashigo | Software Engineer ', 'background: linear-gradient(135deg, #2563EB, #7C3AED); color: #FFFFFF; font-size: 14px; font-weight: bold; padding: 6px 12px; border-radius: 6px;');
-console.log('%c 4+ years coding journey • 0 years professional • Ready for internship opportunities', 'color: #60A5FA; font-size: 12px;');
+console.log('%c IT Intern @ Belgium Campus · 4+ years coding · Open to junior SWE roles', 'color: #60A5FA; font-size: 12px;');
 
 // ===== FIX FOR MOBILE TOUCH =====
 if ('ontouchstart' in window) {
@@ -192,5 +184,5 @@ if ('ontouchstart' in window) {
 const yearSpan = document.querySelector('.footer-copyright');
 if (yearSpan) {
     const currentYear = new Date().getFullYear();
-    yearSpan.textContent = yearSpan.textContent.replace('2025', currentYear);
+    yearSpan.textContent = yearSpan.textContent.replace(/© \d{4}/, `© ${currentYear}`);
 }
